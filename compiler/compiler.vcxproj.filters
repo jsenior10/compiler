@@ -21,7 +21,9 @@
     <ClCompile Include="token.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lexer.cpp" />
+    <ClCompile Include="lexer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="token.h">
@@ -29,6 +31,9 @@
     </ClInclude>
     <ClInclude Include="lexer.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tokenstream.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

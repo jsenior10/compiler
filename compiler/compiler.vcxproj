@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClInclude Include="lexer.h" />
     <ClInclude Include="token.h" />
+    <ClInclude Include="tokenstream.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
