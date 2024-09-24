@@ -35,5 +35,8 @@
     <ClInclude Include="tokenstream.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="type.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
