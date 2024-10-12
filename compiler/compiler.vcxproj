@@ -132,6 +132,7 @@
     <ClCompile Include="token.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="expressionvisitor.h" />
     <ClInclude Include="lexer.h" />
     <ClInclude Include="syntax.h" />
     <ClInclude Include="token.h" />
