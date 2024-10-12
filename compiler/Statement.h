@@ -95,3 +95,19 @@ public:
 private:
 	ExpressionPtr m_exp;
 };
+
+class SequenceStatement : public Statement
+{
+public:
+	SequenceStatement(std::vector<StatementPtr>&& statements)
+		: m_statements(std::move(statements))
+	{}
+
+	const std::vector<StatementPtr>& Get() const { return m_statements; }
+
+	void Dispatch(StatementVisitor& visitor) override { visitor.Visit(*this); }
+
+
+private:
+	std::vector<StatementPtr> m_statements;
+};

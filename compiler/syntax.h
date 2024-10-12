@@ -14,6 +14,7 @@ class CallStatement;
 class IfStatement;
 class ReturnStatement;
 class WhileStatement;
+class SequenceStatement;
 
 class FunctionDefinition;
 class Program;

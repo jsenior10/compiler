@@ -20,4 +20,5 @@ public:
 	virtual void* Visit(IfStatement& expression) = 0;
 	virtual void* Visit(WhileStatement& expression) = 0;
 	virtual void* Visit(DeclarationStatement& expression) = 0;
+	virtual void* Visit(SequenceStatement& expression) = 0;
 };
