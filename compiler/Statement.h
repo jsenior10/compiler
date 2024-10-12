@@ -81,3 +81,17 @@ private:
 	ExpressionPtr m_initExp;
 };
 
+class ReturnStatement : public Statement
+{
+public:
+	ReturnStatement(ExpressionPtr&& exp)
+		: m_exp(std::move(exp))
+	{}
+
+	const Expression& GetExpression() const { return *m_exp; }
+
+	void Dispatch(StatementVisitor& visitor) override { visitor.Visit(*this); }
+
+private:
+	ExpressionPtr m_exp;
+};
