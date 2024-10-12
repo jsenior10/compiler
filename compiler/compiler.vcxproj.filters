@@ -47,5 +47,8 @@
     <ClInclude Include="Expression.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VariableDeclaration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -135,6 +135,7 @@
     <ClInclude Include="Expression.h" />
     <ClInclude Include="expressionvisitor.h" />
     <ClInclude Include="lexer.h" />
+    <ClInclude Include="VariableDeclaration.h" />
     <ClInclude Include="syntax.h" />
     <ClInclude Include="token.h" />
     <ClInclude Include="tokenstream.h" />
