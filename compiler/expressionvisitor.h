@@ -19,4 +19,5 @@ public:
 	virtual void* Visit(ReturnStatement& expression) = 0;
 	virtual void* Visit(IfStatement& expression) = 0;
 	virtual void* Visit(WhileStatement& expression) = 0;
+	virtual void* Visit(DeclarationStatement& expression) = 0;
 };

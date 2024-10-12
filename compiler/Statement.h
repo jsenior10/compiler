@@ -55,3 +55,29 @@ private:
 	ExpressionPtr m_rval;
 	const VariableDeclaration* m_varDecl;
 };
+
+class DeclarationStatement : public Statement
+{
+public:
+	DeclarationStatement(VariableDeclarationPtr&& varDecl, ExpressionPtr&& initExp = ExpressionPtr())
+		: m_varDecl(std::move(varDecl))
+		, m_initExp(std::move(initExp))
+	{}
+
+	const VariableDeclaration* GetVarDecl() const { return m_varDecl.get(); }
+
+	bool HasInitExp() const { return bool(m_initExp); }
+
+	const Expression& GetInitExp() const
+	{
+		assert(HasInitExp() && "Expected initialiser experssion in var decl");
+		return *m_initExp;
+	}
+
+	void Dispatch(StatementVisitor& visitor) override { visitor.Visit(*this); }
+
+private:
+	VariableDeclarationPtr m_varDecl;
+	ExpressionPtr m_initExp;
+};
+
