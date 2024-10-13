@@ -126,6 +126,15 @@ public:
 	const Statement& GetThenStatement() const { return *m_thenStatement; }
 
 	bool HasElseStatement() const { return bool(m_elseStatement); }
+
+	const Statement& GetElseStatement() const
+	{
+		assert(HasElseStatement() && "Expected else statement");
+		return *m_elseStatement;
+	}
+
+	void Dispatch(StatementVisitor& visitor) override { visitor.Visit(*this); }
+
 private:
 	ExpressionPtr m_conditionExpression;
 	StatementPtr m_thenStatement;
