@@ -140,3 +140,22 @@ private:
 	StatementPtr m_thenStatement;
 	StatementPtr m_elseStatement;
 };
+
+class WhileStatement : public Statement
+{
+public:
+	WhileStatement(ExpressionPtr conditionExp, StatementPtr bodyStatement)
+		: m_conditionExp(std::move(conditionExp))
+		, m_bodyStatement(std::move(bodyStatement))
+	{}
+
+	const Expression& GetConditionExpression() const { return *m_conditionExp; }
+
+	const Statement& GetBodyStatement() const { return *m_bodyStatement; }
+
+	void Dispatch(StatementVisitor& visitor) override { visitor.Visit(*this); }
+
+private:
+	ExpressionPtr m_conditionExp;
+	StatementPtr m_bodyStatement;
+};
