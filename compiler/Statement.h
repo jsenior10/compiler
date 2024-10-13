@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Expression.h"
-#include "VariableDeclaration.h"
+#include "expression.h"
+#include "variabledeclaration.h"
 
 class Statement
 {

@@ -44,13 +44,13 @@
     <ClInclude Include="expressionvisitor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Expression.h">
+    <ClInclude Include="expression.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VariableDeclaration.h">
+    <ClInclude Include="variabledeclaration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Statement.h">
+    <ClInclude Include="statement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
