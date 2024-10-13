@@ -111,3 +111,23 @@ public:
 private:
 	std::vector<StatementPtr> m_statements;
 };
+
+class IfStatement : public Statement
+{
+public:
+	IfStatement(ExpressionPtr conditionExp, StatementPtr thenStatement, StatementPtr elseStatement = StatementPtr())
+		: m_conditionExpression(std::move(conditionExp))
+		, m_thenStatement(std::move(thenStatement))
+		, m_elseStatement(std::move(elseStatement))
+	{}
+
+	const Expression& GetConditionExpression() const { return *m_conditionExpression; }
+
+	const Statement& GetThenStatement() const { return *m_thenStatement; }
+
+	bool HasElseStatement() const { return bool(m_elseStatement); }
+private:
+	ExpressionPtr m_conditionExpression;
+	StatementPtr m_thenStatement;
+	StatementPtr m_elseStatement;
+};
